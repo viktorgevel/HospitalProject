@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input data for biochemical blood analysis on enzymes</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .body {
+            background: rgba(0, 0, 240, 0.05);
+        }
+        .form-horizontal {
+            margin-top: 50px;
+            border: darkblue;
+            border-width: medium;
+        }
+        .disabledoption {
+            background: darkblue;
+            font: bold 170% djvu-sans;
+            color: white;
+        }
+        .option {
+            font: bold 170% djvu-sans;
+        }
+        .form-control {
+            background: rgba(0, 0, 240, 0.1);
+        }
+        .btn-color {
+            background: cornflowerblue;
+        }
+        .legend {
+            border-bottom: solid;
+            border-bottom-color: darkblue;
+        }
+    </style>
+</head>
+<body class="body">
+<div class="col-md-3"></div>
+<div class="col-md-5">
+    <form class="form-horizontal" role="form"  action="biochemicalbloodanalysisonenzymesforguest" method="post">
+        <h3 align="center" class="legend">Внесіть свої дані до всіх полів<br><br></h3>
+        <div class="form-group">
+            <label for="sex" class="col-sm-6 control-label">Стать і вік</label>
+            <div class="col-sm-6">
+                <select type="text" class="form-control" id="sex" placeholder="Оберіть вік і стать зі списку" name="aSexAge">
+                    <option disabled class="disabledoption">Доросла людина</option>
+                    <option class="option">жінка</option>
+                    <option class="option">чоловік</option>
+                    <option disabled class="disabledoption">Дитина</option>
+                    <option class="option">до 1 місяця</option>
+                    <option class="option">до 1 року</option>
+                    <option class="option">від 1 до 14 років</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="AML" class="col-sm-6 control-label">
+                Амілаза
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="AML" placeholder="Amylase, Ед/л (Е/л)" min="0" max="200" step="0.1" name="aAmylase"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="LPS" class="col-sm-6 control-label">
+                Ліпаза
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="LPS" placeholder="Lipase, Ед/мл" min="0" max="120" step="0.1" name="aLipase"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="LDH" class="col-sm-6 control-label">
+                Лактатдегидрогеназа
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="LDH" placeholder="Lactate dehydrogenase, Ед/л" min="0" max="800" step="0.1" name="aLactateDehydrogenase"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ALT" class="col-sm-6 control-label">
+                Аланінамінотрансфераза
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="ALT" required placeholder="Alanine aminotransferase, Ед/л" min="0" max="100" step="0.1" name="aAlanineAminotransferase"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="AST" class="col-sm-6 control-label">
+                Аспартатамінотрансфераза
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="AST" required placeholder="Aspartate aminotransferase, Ед/л" min="0" max="100" step="0.1" name="aAspartateAminotransferase"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ALKP" class="col-sm-6 control-label">
+                Лужна фосфатаза
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="ALKP" required placeholder="Alkaline phosphatase, Ед/л" min="0" max="600" name="aAlkalinePhosphatase"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-6 col-sm-6">
+                <button type="submit" class="btn btn-block btn-default btn-color">
+                    <h4>Оцінити дані аналізу</h4>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="col-md-4">
+</div>
+</body>
+</html>

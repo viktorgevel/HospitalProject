@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add doctor</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        .body {
+            background: rgba(0, 0, 240, 0.05);
+        }
+        .form-horizontal {
+            margin-top: 2%;
+        }
+        .form-control {
+            background: rgba(0, 0, 240, 0.1);
+        }
+        .btn-color {
+            background: cornflowerblue;
+        }
+
+    </style>
+</head>
+<body class="body">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form class="form-horizontal" action="addnewdoctor" method="POST">
+    <div class="form-group">
+        <label for="firstName" class="col-md-4 control-label">First name</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" required id="firstName" placeholder="Ім'я" name="aFirstName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="secondName" class="col-md-4 control-label">Second name</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" required id="secondName" placeholder="Прізвище" name="aSecondName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="patronymic" class="col-md-4 control-label">Patronymic</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" id="patronymic" placeholder="По батькові" name="aPatronymic">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="year" class="col-md-4 control-label">Year of birth</label>
+        <div class="col-md-8">
+            <input type="number" class="form-control" id="year" placeholder="Рік народження" min="1920" max="2016" name="aYear">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="month" class="col-md-4 control-label">Month of birth</label>
+        <div class="col-md-8">
+            <input type="number" class="form-control" id="month" placeholder="Місяць народження" min="1" max="12" name="aMonth">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="day" class="col-md-4 control-label">Day of birth</label>
+        <div class="col-md-8">
+            <input type="number" class="form-control" id="day" placeholder="День народження" min="1" max="31" name="aDay">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="sex" class="col-md-4 control-label">Sex</label>
+        <div class="col-md-8">
+            <select type="text" class="form-control" id="sex" name="aSex">
+                <option>Чоловік</option>
+                <option>Жінка</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="firstMedicalSpecialization" class="col-md-4 control-label">First Specialization</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" required id="firstMedicalSpecialization" placeholder="Основна спеціалізація" name="aFirstMedicalSpecialization">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="secondMedicalSpecialization" class="col-md-4 control-label">Second Specialization</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" id="secondMedicalSpecialization" placeholder="Додаткова спеціалізація" name="aSecondMedicalSpecialization">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="shortInformation" class="col-md-4 control-label">Short Information</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" id="shortInformation" placeholder="Коротка інформація про лікаря" name="aShortInformation">
+        </div>
+    </div>
+    <div class="col-md-offset-4 col-md-8">
+        <button type="submit" class="btn btn-lg btn-block btn-color" value="add">Create doctor</button>
+    </div>
+</form>
+</div>
+<div class="col-md-4"></div>
+</body>
+</html>

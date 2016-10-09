@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biochemical blood analysis on lipids input data</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .body {
+            background: rgba(255, 255, 0, 0.1);
+        }
+        .form-horizontal {
+            margin-top: 50px;
+        }
+        .disabledoption {
+            background: #ff8a00;
+            font: bold 170% djvu-sans;
+            color: white;
+        }
+        .option {
+            font: bold 170% djvu-sans;
+        }
+        .form-control {
+            background: rgba(255, 255, 0, 0.35);
+        }
+        .btn-color {
+            background: rgba(255, 255, 0, 0.91);
+        }
+        .legend {
+            border-bottom: solid;
+            border-bottom-color: darkorange;
+        }
+    </style>
+</head>
+<body class="body">
+<div class="col-md-3"></div>
+<div class="col-md-5">
+    <form class="form-horizontal" role="form"  action="biochemicalbloodanalysisonlipidsforguest" method="post">
+        <h3 align="center" class="legend">Внесіть свої дані до всіх полів<br><br></h3>
+        <div class="form-group">
+            <label for="sex" class="col-sm-6 control-label">Стать і вік</label>
+            <div class="col-sm-6">
+                <select type="text" class="form-control" id="sex" placeholder="Оберіть вік і стать зі списку" name="aSexAge">
+                    <option disabled class="disabledoption">Доросла людина</option>
+                    <option class="option">жінка</option>
+                    <option class="option">чоловік</option>
+                    <option disabled class="disabledoption">Дитина</option>
+                    <option class="option">до 1 місяця</option>
+                    <option class="option">до 1 року</option>
+                    <option class="option">від 1 до 14 років</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Chol" class="col-sm-6 control-label">
+                Холестерин загальний
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="Chol" placeholder="Cholesterol, Ммоль/л" min="0" max="20" step="0.01" name="aCholesterol"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="LDL" class="col-sm-6 control-label">
+                Холестерин ліпопротеїнів низької щільності
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="LDL" placeholder="Low density lipoprotein, Ммоль/л" min="0" max="15" step="0.01" name="aLowDensityLipoprotein"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="HDL" class="col-sm-6 control-label">
+                Холестерин ліпопротеїнів високої щільності
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="HDL" placeholder="High density lipoprotein, Ммоль/л" min="0" max="10" step="0.01" name="aHighDensityLipoprotein"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-6 col-sm-6">
+                <button type="submit" class="btn btn-block btn-default btn-color">
+                    <h4>Оцінити дані аналізу</h4>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="col-md-4">
+</div>
+</body>
+</html>

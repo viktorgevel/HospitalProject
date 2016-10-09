@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biochemical blood analysis on minerals input data</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .body {
+            background: rgba(0, 0, 240, 0.05);
+        }
+        .form-horizontal {
+            margin-top: 50px;
+        }
+        .disabledoption {
+            background: darkblue;
+            font: bold 170% djvu-sans;
+            color: white;
+        }
+        .option {
+            font: bold 170% djvu-sans;
+        }
+        .form-control {
+            background: rgba(0, 0, 240, 0.1);
+        }
+        .btn-color {
+            background: cornflowerblue;
+        }
+        .legend {
+            border-bottom: solid;
+            border-bottom-color: darkblue;
+        }
+    </style>
+</head>
+<body class="body">
+<div class="col-md-3"></div>
+<div class="col-md-5">
+    <form class="form-horizontal" role="form"  action="biochemicalbloodanalysisonmineralsforguest" method="post">
+        <h3 align="center" class="legend">Внесіть свої дані до всіх полів<br><br></h3>
+        <div class="form-group">
+            <label for="sex" class="col-sm-6 control-label">Стать і вік</label>
+            <div class="col-sm-6">
+                <select class="form-control" id="sex" name="aSexAge">
+                    <option disabled class="disabledoption">Доросла людина</option>
+                    <option class="option">жінка</option>
+                    <option class="option">чоловік</option>
+                    <option disabled class="disabledoption">Дитина</option>
+                    <option class="option">до 1 місяця</option>
+                    <option class="option">до 1 року</option>
+                    <option class="option">від 1 до 14 років</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="K" class="col-sm-6 control-label">
+                Калій
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="K" placeholder="Potassium, Ммоль/л" min="0" max="15" step="0.1" name="aPotassium"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Na" class="col-sm-6 control-label">
+                Натрій
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="Na" placeholder="Sodium, Ммоль/л" min="0" max="400" step="0.1" name="aSodium"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Ca" class="col-sm-6 control-label">
+                Кальцій
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="Ca" placeholder="Calcium total, Ммоль/л" min="0" max="10" step="0.01" name="aCalcium"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Mg" class="col-sm-6 control-label">
+                Магній
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="Mg" placeholder="Magnesium, Ммоль/л" min="0" max="5" step="0.01" name="aMagnesium"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="P" class="col-sm-6 control-label">
+                Фосфор
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="P" placeholder="Inorganic Phosphate, Ммоль/л" min="0" max="5" step="0.01" name="aPhosphorus"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Fe" class="col-sm-6 control-label">
+                Залізо
+            </label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" required id="Fe" placeholder="Iron, Мкмоль/л" min="0" max="100" step="0.01" name="aIron"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-6 col-sm-6">
+                <button type="submit" class="btn btn-block btn-default btn-color">
+                    <h4>Оцінити дані аналізу</h4>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="col-md-4">
+</div>
+</body>
+</html>

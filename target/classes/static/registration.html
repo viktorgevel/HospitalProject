@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration form</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">
+                Надайте короткі відомості про себе
+            </h3>
+            <form class="form-horizontal" role="form" action="createnewclient" method="post">
+                <div class="form-group">
+
+                    <label for="inputEmail" class="col-sm-3 control-label" >
+                        Email
+                    </label>
+                    <div class="col-sm-7">
+                        <input type="email" class="form-control" id="inputEmail" required placeholder="Введіть email - він стане вашим логіном" name="j_username"/>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label for="inputPassword3" class="col-sm-3 control-label">
+                        Password
+                    </label>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" id="inputPassword3" required placeholder="Введіть пароль" name="j_password"/>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">First name</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="firstName" required placeholder="Ваше ім'я" name="aFirstName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="secondName" class="col-sm-3 control-label">Second name</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="secondName" required placeholder="Ваше прізвище" name="aSecondName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="patronymic" class="col-sm-3 control-label">Patronymic</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="patronymic" placeholder="Ваше по батькові" name="aPatronymic">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="year" class="col-sm-3 control-label">Year of birth</label>
+                    <div class="col-md-7">
+                        <input type="number" class="form-control" id="year" placeholder="Рік вашого народження" name="aYear">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="month" class="col-sm-3 control-label">Month of birth</label>
+                    <div class="col-md-7">
+                        <input type="number" class="form-control" id="month" placeholder="Місяць вашого народження" name="aMonth">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="day" class="col-sm-3 control-label">Day of birth</label>
+                    <div class="col-md-7">
+                        <input type="number" class="form-control" id="day" placeholder="День вашого народження" name="aDay">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sex" class="col-sm-3 control-label">Sex</label>
+                    <div class="col-md-7">
+                        <select type="text" class="form-control" id="sex" placeholder="Зазначте вашу стать зі списку" name="aSex">
+                            <option>Чоловік</option>
+                            <option>Жінка</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Address</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="address" placeholder="Ваша повна адреса" name="aAddress">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Phone</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="phone" placeholder=" Ваш телефон у форматі 0**-*******" name="aPhone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <div class="checkbox">
+
+                            <label>
+                                <input type="checkbox" /> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+
+                        <button type="submit" class="btn btn-default btn-block" value="add">
+                            Sign in
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+</body>
+</html>
